@@ -3,6 +3,7 @@ pandas
 numpy
 openai
 plotly
-scikit-learn
+scikit-learn==1.5.2
 imbalanced-learn
 xgboost
+catboost

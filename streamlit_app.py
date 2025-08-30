@@ -22,7 +22,8 @@ client = OpenAI(base_url="https://api.groq.com/openai/v1",
 
 # Function to load a machine learning model from a file
 def load_model(filename):
-    with open(filename, 'rb') as file:
+    model_path = os.path.join(os.path.dirname(__file__), filename)
+    with open(model_path, 'rb') as file:
         return pickle.load(file)
 
 # Load the trained machine learning models
@@ -270,3 +271,6 @@ if selected_customer_option:
         # Making the prediction and generating explanation
         avg_probability = make_prediction(input_df, input_dict)
       
+
+if __name__ == "__main__":
+    pass
